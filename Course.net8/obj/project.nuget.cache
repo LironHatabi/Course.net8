@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E9/jor/tZLo=",
+  "dgSpecHash": "V8K0T/Td1LE=",
   "success": true,
-  "projectFilePath": "/Users/lironhatabiyosef/RiderProjects/Course.net8/Course.net8/Course.net8.csproj",
+  "projectFilePath": "/Users/lironhatabiyosef/RiderProjects/gitVersion/Course.net8/Course.net8.csproj",
   "expectedPackageFiles": [
     "/Users/lironhatabiyosef/.nuget/packages/microsoft.aspnetcore.openapi/8.0.11/microsoft.aspnetcore.openapi.8.0.11.nupkg.sha512",
     "/Users/lironhatabiyosef/.nuget/packages/microsoft.entityframeworkcore/9.0.0/microsoft.entityframeworkcore.9.0.0.nupkg.sha512",

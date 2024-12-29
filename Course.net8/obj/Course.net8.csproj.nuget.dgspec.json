@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/lironhatabiyosef/RiderProjects/Course.net8/Course.net8/Course.net8.csproj": {}
+    "/Users/lironhatabiyosef/RiderProjects/gitVersion/Course.net8/Course.net8.csproj": {}
   },
   "projects": {
-    "/Users/lironhatabiyosef/RiderProjects/Course.net8/Course.net8/Course.net8.csproj": {
+    "/Users/lironhatabiyosef/RiderProjects/gitVersion/Course.net8/Course.net8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/lironhatabiyosef/RiderProjects/Course.net8/Course.net8/Course.net8.csproj",
+        "projectUniqueName": "/Users/lironhatabiyosef/RiderProjects/gitVersion/Course.net8/Course.net8.csproj",
         "projectName": "Course.net8",
-        "projectPath": "/Users/lironhatabiyosef/RiderProjects/Course.net8/Course.net8/Course.net8.csproj",
+        "projectPath": "/Users/lironhatabiyosef/RiderProjects/gitVersion/Course.net8/Course.net8.csproj",
         "packagesPath": "/Users/lironhatabiyosef/.nuget/packages/",
-        "outputPath": "/Users/lironhatabiyosef/RiderProjects/Course.net8/Course.net8/obj/",
+        "outputPath": "/Users/lironhatabiyosef/RiderProjects/gitVersion/Course.net8/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/lironhatabiyosef/.nuget/NuGet/NuGet.Config"
