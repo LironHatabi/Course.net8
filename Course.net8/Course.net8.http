@@ -1,0 +1,6 @@
+@Course.net8_HostAddress = http://localhost:5003
+
+GET {{Course.net8_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
