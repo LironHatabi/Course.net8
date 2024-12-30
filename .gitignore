@@ -1,38 +1,20 @@
-# Rider specific
-.idea/
-*.sln.iml
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries/
-.idea/libraries/
-.idea/modules.xml
-.idea/vcs.xml
-.idea/.name
-
-# Build output
+# Ignore build output directories
 /bin/
 /obj/
 /ref/
 /refint/
 
-# Build artifacts
+# Ignore build artifacts
 *.dll
 *.pdb
 *.cache
-*.AssemblyInfoInputs.cache
 *.sourcelink.json
-*.log
+*.AssemblyInfoInputs.cache
 
-# Temporary files
+# Ignore Rider-specific files
+.idea/
+rider.project.restore.info
+
+# Ignore temporary files
 *.tmp
-*.temp
-*.bak
-*.swp
-*.swo
-*.pid
-
-# Node.js
-node_modules/
-
-# macOS
-.DS_Store
+*.log
