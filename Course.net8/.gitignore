@@ -1,0 +1,63 @@
+# Build Folders
+/bin/
+/obj/
+/ref/
+/refint/
+
+# Build Artifacts
+*.dll
+*.pdb
+*.cache
+*.exe
+*.log
+*.json
+*.sourcelink.json
+*.AssemblyInfoInputs.cache
+
+# IDE and Rider-specific files
+.idea/
+*.sln.iml
+.idea/modules.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+.idea/libraries/
+.idea/vcs.xml
+*.DotSettings.user
+rider.project.restore.info
+
+# DotNet Specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio Specific
+.vs/
+*.suo
+*.user
+*.userosscache
+*.rsuser
+
+# Publish Output
+*.pubxml
+*.publishproj
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Logs
+*.log
+logs/
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.pid
+
+# Mac OS
+.DS_Store
