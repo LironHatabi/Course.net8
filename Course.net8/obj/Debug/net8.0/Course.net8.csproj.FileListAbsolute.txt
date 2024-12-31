@@ -76,3 +76,4 @@
 /Users/lironhatabiyosef/RiderProjects/gitVersion/Course.net8/obj/Debug/net8.0/Course.net8.pdb
 /Users/lironhatabiyosef/RiderProjects/gitVersion/Course.net8/obj/Debug/net8.0/Course.net8.genruntimeconfig.cache
 /Users/lironhatabiyosef/RiderProjects/gitVersion/Course.net8/obj/Debug/net8.0/ref/Course.net8.dll
+/Users/lironhatabiyosef/RiderProjects/gitVersion/Course.net8/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll

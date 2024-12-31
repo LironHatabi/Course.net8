@@ -1,30 +1,23 @@
+using Course.net8.Infra.ApplicationDbContext;
+
 namespace Course.net8.Services;
 
 public class ProductsRepository : IProductsRepository
 {
-    private  List<Product> _products = new List<Product>();
-    public ProductsRepository()
+    private readonly CourseDbContext _courseDbContext;
+    public ProductsRepository( CourseDbContext courseDbContext)
     {
-        _products.Add(
-            new Product
-            {
-                Id = 1, 
-                Name= "coffee",
-                Producer = "elit",
-                Amount = 9,
-                Price = 12.6m,
-                Description = "good coffee"
-            });
+        this._courseDbContext = courseDbContext;
     }
     public async Task<List<Product>> GetAllProducts()
     {
-        await Task.Delay(1000);
-        return _products;
+        var products = await _courseDbContext.Products.ToListAsync();
+        return products;
     }
     public async Task<Product?> GetProductById(int id)
     {
-        await Task.Delay(1000);
-        var item=this._products.FirstOrDefault(x=>x.Id==id);
+        
+        var item= await _courseDbContext.Products.FirstOrDefaultAsync(x=>x.Id==id);
         if (item == null)
         {
             return null;
@@ -34,67 +27,29 @@ public class ProductsRepository : IProductsRepository
     }
     public async Task DeleteItem(int id)
     {
-        
-        await Task.Delay(1000);
-        var item=this._products.FirstOrDefault(x=>x.Id==id);
+        var item=await _courseDbContext.Products.FirstOrDefaultAsync(x=>x.Id==id);
         if (item != null)
         {
-            this._products.Remove(item);
+            _courseDbContext.Products.Remove(item);
         }
+        await _courseDbContext.SaveChangesAsync();
     }
 
    public async Task<Product?> UpdateProduct(int id, Product product)
     {
-        var item = this._products.First(x => x.Id == id);
-        if (item == null)
-        {
-            return null;
-        }
-        var itemToUpdate = item with{Amount = product.Amount , Description = product.Description, Price = product.Price, Name = product.Name, Producer = product.Producer};
-
-       _products = _products.Select(x =>
-        {
-            if (x.Id == id)
-            {
-                return itemToUpdate;
-            }
-            else
-            {
-                return x;
-            }
-        }).ToList();
-        return itemToUpdate;
+        _courseDbContext.Products.Update(product);
+        await _courseDbContext.SaveChangesAsync();
+        return product;
     }
 
 
-    public Task<Product> AddNewProduct(Product product)
+    public async Task<Product> AddNewProduct(Product product)
     { 
-        var lastId = _products.Max(x=>x.Id) + 1;
-        var productToInsert = product with{Id = lastId}; 
-        _products.Add(productToInsert);
-        return Task.FromResult(productToInsert);
+        _courseDbContext.Products.Add(product);
+        await _courseDbContext.SaveChangesAsync();
+        return product;
+
     }
 
-
-
+    
 }
-
-
-// public class ProductsRepository2 : IProductsRepository
-// {
-//     public async Task<List<Product>> GetAllProducts()
-//     {
-//         return new List<Product>()
-//         {
-//             new Product
-//             {
-//                 Id = 2, 
-//                 Name= "2",
-//                 Producer = "2",
-//                 Amount = 9,
-//                 Price = 12.6m,
-//                 Description = "good coffee"
-//             },
-//         };
-//     }
-// }

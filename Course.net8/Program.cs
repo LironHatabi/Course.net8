@@ -1,4 +1,6 @@
 
+using Course.net8.Infra.ApplicationDbContext;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
@@ -13,12 +15,12 @@ builder.Services.Configure<HeadersRemoveConfig>(builder.Configuration.GetSection
 // builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddDbContext<CourseDbContext>(o=>o.UseInMemoryDatabase("CourseDb"));
 
 //Resolve DI
-builder.Services.AddSingleton<IProductsRepository, ProductsRepository>();
+// builder.Services.AddSingleton<IProductsRepository, ProductsRepository>();
 //builder.Services.AddTransient<IProductsRepository, ProductsRepository>();//מייצר בכל פעם איסטנס חדש
-// builder.Services.AddScoped<IProductsRepository, ProductsRepository>();//best Practise
+builder.Services.AddScoped<IProductsRepository, ProductsRepository>();//best Practise
 //אחד פאר בקשה
 
 var app = builder.Build();
